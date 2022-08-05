@@ -1,5 +1,3 @@
-CREATE SCHEMA IF NOT EXISTS `simpleshop` DEFAULT CHARACTER SET utf8mb4;
-
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: simpleshop
@@ -21,7 +19,7 @@ CREATE SCHEMA IF NOT EXISTS `simpleshop` DEFAULT CHARACTER SET utf8mb4;
 -- Table structure for table `hibernate_sequence`
 --
 
-use `simpleshop`;
+use simpleshop;
 
 DROP TABLE IF EXISTS `hibernate_sequence`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
