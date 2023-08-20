@@ -1,5 +1,5 @@
 CREATE SCHEMA IF NOT EXISTS `simpleshop` DEFAULT CHARACTER SET utf8mb4;
--- 7414
+
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: simpleshop
