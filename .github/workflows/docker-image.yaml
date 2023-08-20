@@ -24,10 +24,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t simpleShopMySQL .
+      run: docker build -t simpleshopmysql .
 
     - name: Tag Docker image
-      run: docker tag simpleShopMySQL:latest yukilolz/simpleShopMySQL:latest
+      run: docker tag simpleshopmysql:latest yukilolz/simpleshopmysql:latest
 
     - name: Push Docker image
-      run: docker push yukilolz/simpleShopMySQL:latest
+      run: docker push yukilolz/simpleshopmysql:latest
