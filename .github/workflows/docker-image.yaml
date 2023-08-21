@@ -27,6 +27,9 @@ jobs:
     - name: Build Docker image
       run: docker build -t simpleshopmysql ./docker
 
+    - name: Create jar
+      run: mvn clean package dockerfile:build -DskipTests=true
+
     - name: Tag Docker image
       run: docker tag simpleshopmysql:latest yukilolz/simpleshopmysql:latest
 
