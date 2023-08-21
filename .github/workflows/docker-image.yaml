@@ -24,14 +24,16 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build Docker image
+    - name: Build MySQL Docker image
       run: docker build -t simpleshopmysql ./docker
 
-    - name: Create jar
+    - name: Build Create jar image
       run: mvn clean package dockerfile:build -DskipTests=true
 
     - name: Tag Docker image
       run: docker tag simpleshopmysql:latest yukilolz/simpleshopmysql:latest
+      run: docker tag shichoc/simpleshopmysql:0.0.1-SNAPSHOT yukilolz/simpleshop:latest
 
     - name: Push Docker image
       run: docker push yukilolz/simpleshopmysql:latest
+      run: docker push yukilolz/simpleshop:latest
